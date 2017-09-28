@@ -41,7 +41,7 @@
 
 <style>
 @import "../third/swiper/swiper.css";
-    #slide{height:2000px}
+    #slide{}
     .swiper-slide{}
     .slide-img{width:100%;height:6rem;}
 </style>

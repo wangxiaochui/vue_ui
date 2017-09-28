@@ -4,7 +4,7 @@
             <div id="title">
                 <div id="logo">
                    <div class="logo">
-                    这里放logo
+                       <img src="../assets/mylogo.png">
                    </div>
                 </div>
                 <div id="heder-act">
