@@ -83,16 +83,29 @@
             <img src="http://www.myshop.com/upload/images/ad.jpg">
         </div>
         <!-- 广告位end -->
+        <div v-for="good in list">
+            sfsfdsdf
+        </div>
+
         <div style="height:1.3rem"></div>
     </div>
 
 </template>
 
 <script>
+    import { mapGetters } from 'vuex'
     export default {
         data: () => ({
             show: true
-        })
+        }),
+        created: function () {
+            this.$store.dispatch('getAllGoods')
+        },
+        computed: {
+            ...mapGetters({
+                list: 'goodsList',
+            })
+        }
     }
 </script>
 
