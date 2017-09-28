@@ -4,7 +4,7 @@
 import * as types from '../mutation-types'
 import goods from '../../api/goods'
 const state = {
-    goodsList: [],
+    goodsList: null,
     info:'test'
 }
 
@@ -13,7 +13,7 @@ const getters = {
     goodsList: state=>state.goodsList
 }
 
-    / actions
+    // actions
 const actions = {
     getAllGoods ({ commit, state }) {
         goods.getList(function(data){

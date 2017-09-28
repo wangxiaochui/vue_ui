@@ -99,6 +99,7 @@
             show: true
         }),
         created: function () {
+            console.log(this.$store.getters)
             this.$store.dispatch('getAllGoods')
         },
         computed: {

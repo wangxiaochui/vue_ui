@@ -13,7 +13,7 @@ const state = {
 
 // getters
 const getters = {
-    checkoutStatus: state => state.checkoutStatus
+    checkoutStatus1: state => state.checkoutStatus
 }
 
 // actions
