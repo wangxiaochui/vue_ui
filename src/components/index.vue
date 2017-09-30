@@ -83,11 +83,11 @@
             <img src="http://www.myshop.com/upload/images/ad.jpg">
         </div>
         <!-- 广告位end -->
-        <div v-for="good in list">
+       <!-- <div v-for="good in list">
             sfsfdsdf
-        </div>
+        </div> -->
 
-        <div style="height:1.3rem"></div>
+        <div style="height:1.2rem;background:#fff"></div>
     </div>
 
 </template>
