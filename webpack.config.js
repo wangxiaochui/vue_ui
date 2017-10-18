@@ -1,12 +1,14 @@
 var path = require('path')
 var webpack = require('webpack')
-
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'build.js'
+      path: path.resolve(__dirname, './dist'),
+      publicPath: '/dist/',
+      chunkFilename: 'chunk[id].js?[chunkhash]',
+      //filename: options.dev ? '[name].js' : '[name].js?[chunkhash]',
+      filename: '[name].js',
   },
   module: {
     rules: [
@@ -73,6 +75,18 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    })
+    }),
+      new HtmlWebpackPlugin({
+          filename: 'index.html',
+          title: '我是头',
+          inject: true, // head -> Cannot find element: #app
+          //chunks: ['index'],
+          //template: './dll/template.html',
+          hash: true,
+          minify: {
+              removeComments: true,
+              collapseWhitespace: false
+          }
+      })
   ])
 }
